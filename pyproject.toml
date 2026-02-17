@@ -1,0 +1,23 @@
+[project]
+name = "ai-microprojects"
+version = "0.1.0"
+authors = [{ name = "Chitrank Agnihoti", email = "chitrank2050@gmail.com" }]
+description = "Learning AI with microprojects in the form of notebooks."
+readme = "README.md"
+requires-python = ">=3.12"
+
+# Production dependencies
+dependencies = ["hatchling>=1.28.0", "jupyter>=1.1.1"]
+
+[dependency-groups]
+dev = ["build>=1.4.0", "ruff>=0.14.13"]
+
+[project.scripts]
+dev = "app.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
