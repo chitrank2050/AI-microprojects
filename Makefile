@@ -85,8 +85,8 @@ dev:
 		echo "Run 'make init' first."; \
 		exit 1; \
 	fi
-	@echo "🚀 Starting development server..."
-	. $(VENV)/bin/activate && ENV=dev $(UV) run -m app.main
+	@echo "🚀 Running notebooks..."
+	. $(VENV)/bin/activate && ENV=dev $(UV) run jupyter lab
 
 # Tree - Show project structure
 tree:
